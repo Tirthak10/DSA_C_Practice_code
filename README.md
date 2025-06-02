@@ -43,4 +43,25 @@ int main() {
 }
 
 Value of Y is :6
+```
+# 🧾 C++ Program: Using `string` and `cin`
+
+This program demonstrates how to take string input from the user using `cin` and output it using `cout`. While it uses basic `cin`, it's a foundational step before using more advanced input functions like `getline()`.
+
+---
+
+## 💻 Code
+
+```cpp
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    // String and getline
+    string s1, s2;
+    cin >> s1 >> s2;
+    cout << s1 << " " << s2;
+    return 0;
+}
 
