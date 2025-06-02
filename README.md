@@ -17,5 +17,4 @@ int main() {
     return 0;
 }
 
-# C++ Program: Demonstration of `float` and `double` Data Types
 
