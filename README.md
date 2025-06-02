@@ -35,3 +35,6 @@ int main() {
    cout << "Value of Y is : " << y;
    return 0;
 }
+
+Value of Y is :6
+
