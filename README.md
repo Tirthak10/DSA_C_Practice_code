@@ -64,4 +64,20 @@ int main() {
     cout << s1 << " " << s2;
     return 0;
 }
+```
+This program demonstrates how to take an entire line of input using `getline()` in C++. This is useful when you want to capture a sentence or string containing spaces.
+```cpp
+#include <iostream>
+using namespace std;
 
+int main() {
+    // String and getline 
+    // In case you want to take everything together in a string, use getline.
+    string str;
+    getline(cin, str);
+    cout << str;
+    return 0;
+}
+
+Input  : Cybersecurity is a fascinating field!
+Output : Cybersecurity is a fascinating field!
