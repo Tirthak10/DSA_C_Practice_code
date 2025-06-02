@@ -81,3 +81,24 @@ int main() {
 
 Input  : Cybersecurity is a fascinating field!
 Output : Cybersecurity is a fascinating field!
+```
+# 🧾 C++ Program: Single Character Input with `char`
+
+This C++ program takes a single character as input from the user using `cin` and prints it back using `cout`.
+
+## 💻 Code
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Using char for single character input
+    char str;
+    cin >> str;
+    cout << str;
+    return 0;
+}
+Input : T
+Output : T
+```
