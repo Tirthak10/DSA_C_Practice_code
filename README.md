@@ -44,7 +44,7 @@ int main() {
 
 Value of Y is :6
 ```
-# 🧾 C++ Program: Using `string` and `cin`
+# 🧾 C++ Program: Using `string` and `getline`
 
 This program demonstrates how to take string input from the user using `cin` and output it using `cout`. While it uses basic `cin`, it's a foundational step before using more advanced input functions like `getline()`.
 
