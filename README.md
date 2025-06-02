@@ -16,6 +16,12 @@ int main() {
     cout << "The value of x : " << x << " And y : " << y;
     return 0;
 }
+
+Example input:
+10 20
+Example output:
+The value of x : 10 And y : 20
+
 ```
 # Simple C++ Program: Demonstration of `float` and `double` Data Types
 
