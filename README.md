@@ -19,19 +19,3 @@ int main() {
 
 # C++ Program: Demonstration of `float` and `double` Data Types
 
-This program is a simple example to show how `float` and `double` data types work in C++.
-
-## 💻 Code
-
-```cpp
-// Online C++ compiler to run C++ program online
-#include <iostream>
-using namespace std;
-
-int main() {
-   // float, double datatypes
-   float x = 5.6;
-   double y = 6;
-   cout << "Value of Y is : " << y;
-   return 0;
-}
