@@ -499,3 +499,143 @@ int main() {
 
 ### 🔸 Brief Description:
 This code uses a nested `if` inside the outer `else if(age <= 57)` block. This allows combining the general eligibility check (`age <= 57`) with a special case for nearing retirement (`age >= 55`)—producing cleaner and slightly more efficient code than checking each age range separately.
+
+# 🚦 Switch Statements in C++
+
+Switch statements are similar to `if-else` constructs but are typically used less often. Still, it's useful to understand them.
+
+We use `switch` when we want to take decisions based on the value of a variable. In this example, we demonstrate how to print the name of the day based on a number from 1 to 7.
+
+---
+
+## 🧠 Concept Overview
+
+You write `switch(variable)` and define cases for each expected value.
+
+---
+
+## ❓ Problem Statement
+
+**Take the day number and print the corresponding day.**
+
+| Input | Output  |
+|-------|---------|
+| 1     | Monday  |
+| 2     | Tuesday |
+| ...   | ...     |
+| 7     | Sunday  |
+
+---
+
+## ⚠️ Incorrect Code: Without `break`
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+Take the day no and print the corresponding day
+for 1 print Monday,
+for 2 print Tuesday and so on for 7 print Sunday
+*/
+
+int main() {
+    int day;
+    cin >> day;
+
+    switch (day) {
+        case 1 :
+            cout << "Monday";
+        case 2 :
+            cout << "Tuesday";
+        case 3 :
+            cout << "Wednesday";
+        case 4 :
+            cout << "Thursday";
+        case 5 :
+            cout << "Friday";
+        case 6 :
+            cout << "Saturday";
+        case 7 :
+            cout << "Sunday";    
+        return 0;
+    }
+}
+```
+
+### 🔎 Input: `5`  
+**Output:** `FridaySaturdaySunday`
+
+As you can see, it starts at case 5 and executes all the statements after that. This is because there's **no `break`** statement to stop the execution after the match.
+
+---
+
+## ✅ Corrected Code: With `break`
+
+To prevent the fall-through behavior seen above, we add `break` after every case.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+Take the day no and print the corresponding day
+for 1 print Monday,
+for 2 print Tuesday and so on for 7 print Sunday
+*/
+
+int main() {
+    int day;
+    cin >> day;
+
+    switch (day) {
+        case 1 :
+            cout << "Monday";
+            break;
+        case 2 :
+            cout << "Tuesday";
+            break;
+        case 3 :
+            cout << "Wednesday";
+            break;
+        case 4 :
+            cout << "Thursday";
+            break;
+        case 5 :
+            cout << "Friday";
+            break;
+        case 6 :
+            cout << "Saturday";
+            break;
+        case 7 :
+            cout << "Sunday"; 
+            break;
+        default:
+            cout << "Invalid";  
+    }
+    cout << " Check ";  
+    return 0;
+}
+```
+
+---
+
+### ✅ Input: `5`  
+**Output:** `Friday Check`
+
+### ✅ Input: `19`  
+**Output:** `Invalid Check`
+
+---
+
+## 📝 Explanation
+
+- The `break` statement stops further execution inside the switch block.
+- Without `break`, execution "falls through" to the next case.
+- The `default` case is used when the input does not match any of the defined cases.
+
+This version correctly handles the logic by isolating each case and terminating it properly, preventing unintended execution of subsequent cases.
+
+---
+
+Happy coding! 🚀
