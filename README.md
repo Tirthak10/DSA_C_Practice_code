@@ -290,4 +290,212 @@ If no `else` is present and the `if` condition fails, the program simply skips o
 
 ---
 
+## ✅ Multi-line Comments
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    /*
+    you can just write 
+    this symbol and write anything 
+    and make a para also if u want 
+    till u end it with this symbol
+    */
+
+}
+```
+
+---
+
+## 📌IF Else Statements
+
+Question: Grading System
+
+### Code:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+A school has following rules for grading system :
+a. Below 25 - F
+b. 25 to 44 - E
+c. 45 to 49 - D
+d. 50 to 59 - C
+e. 60 to 79 - B
+f. 80 to 100 - A
+Ask user to enter marks and print the corresponding grade.
+*/
+
+int main() {
+    int marks;
+    cin >> marks;
+    if(marks < 25){
+        cout << "F";
+    }
+    else if(marks >= 25 && marks <= 44){
+        cout << "E";
+    }
+    else if(marks >= 45 && marks <= 49){
+        cout << "D";
+    }
+    else if(marks >= 50 && marks <= 59){
+        cout << "C";
+    }
+    else if(marks >= 60 && marks <= 79){
+        cout << "B";
+    }
+    else if(marks >= 80 && marks <= 100){
+        cout << "A";
+    }
+    return 0;
+}
+```
+
+### Example:
+
+```
+Input  : 21
+Output : F
+
+Input  : 72
+Output : B
+```
+
+---
+
+## 🔁 Trimmed Version of Grading System
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+A school has following rules for grading system :
+a. Below 25 - F
+b. 25 to 44 - E
+c. 45 to 49 - D
+d. 50 to 59 - C
+e. 60 to 79 - B
+f. 80 to 100 - A
+Ask user to enter marks and print the corresponding grade.
+*/
+
+int main() {
+    int marks;
+    cin >> marks;
+    if(marks < 25){
+        cout << "F";
+    }
+    else if(marks <= 44){
+        cout << "E";
+    }
+    else if(marks <= 49){
+        cout << "D";
+    }
+    else if(marks <= 59){
+        cout << "C";
+    }
+    else if(marks <= 79){
+        cout << "B";
+    }
+    else if(marks <= 100){
+        cout << "A";
+    }
+    return 0;
+}
+```
+
+---
+
+## 🔎 NESTED If-Else Question
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+Take the age from the user and then decide accordingly 
+1. If age < 18;
+print -> not eligible for the job
+
+2. If age >= 18;
+print -> "eligible for job"
+
+3. If age >= 55 and age <= 57;
+print -> "eligible for job, but retirement soon."
+
+4. If age > 57
+print -> "retirement time"
+*/
+
+int main() {
+    int age;
+    cin >> age;
+    if(age < 18){
+        cout << "Not eligible for the job";
+    }
+    else if(age <= 55){
+        cout << "eligible for the job";
+    }
+    else if(age <= 57){
+        cout << "eligible for the job, but retirement soon";
+    }
+    else{ 
+        cout << "Retirement time";
+    }
+    return 0;
+}
+```
+
+### 🔸 Brief Description:
+This code takes a user's age and uses a sequence of if-else conditions to check and print the eligibility for a job. It first checks if the person is under 18, then between 18 and 55, between 55 and 57 (indicating nearing retirement), and finally checks if the person is above 57 for retirement.
+
+---
+
+## 🧠 Nested IF (Alternative Version)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+Take the age from the user and then decide accordingly 
+1. If age < 18;
+print -> not eligible for the job
+
+2. If age >= 18;
+print -> "eligible for job"
+
+3. If age >= 55 and age <= 57;
+print -> "eligible for job, but retirement soon."
+
+4. If age > 57
+print -> "retirement time"
+*/
+
+int main() {
+    int age;
+    cin >> age;
+    if(age < 18){
+        cout << "Not eligible for the job";
+    }
+    else if(age <= 57){
+        cout << "eligible for the job";
+        if(age >= 55){
+            cout << ", but retirement soon";
+        }
+    }
+    else{ 
+        cout << "Retirement time";
+    }
+    return 0;
+}
+```
+
+### 🔸 Brief Description:
+This code uses a nested `if` inside the outer `else if(age <= 57)` block. This allows combining the general eligibility check (`age <= 57`) with a special case for nearing retirement (`age >= 55`)—producing cleaner and slightly more efficient code than checking each age range separately.
